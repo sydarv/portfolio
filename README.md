@@ -1,38 +1,56 @@
 # Sydney Arvanitas: portfolio
 
-Live at https://sydneyarvanitas.com. Hosted free on GitHub Pages; changes go live a minute or two after you upload them.
-
-## Add a drawing or graphic to the gallery
-
-1. In Procreate, tap **Actions (wrench) → Share → JPEG** (or PNG if it has a transparent background) and save it to Files or Photos.
-2. Rename the file to the title you want shown, using dashes for spaces, e.g. `Coffee-Shop-Poster.jpg` shows as "Coffee Shop Poster".
-3. On github.com/sydarv/portfolio, open the **illustrations** folder, then **Add file → Upload files**, drag the image in and click **Commit changes**.
-
-That's it: the home page gallery lists everything in that folder automatically. To remove a piece, open it in the folder, click the **⋯** menu and choose **Delete file**.
-
-Tips: keep each file under about 3 MB so the page loads quickly (JPEG export is usually fine). Pieces are shown in reverse alphabetical order, so to control order you can start names with a number, e.g. `2-Coffee-Shop-Poster.jpg` appears before `1-Cat-Sketch.jpg`. The number is shown in the title, so only do this if you don't mind it.
-
-## Use your own handwriting for your name
-
-Write your name in Procreate on a transparent background, export it as **PNG**, name it `signature.png` and upload it to the **images** folder. The home page will use it instead of the handwriting font. Tip: dark plum (#2E2140) matches the site; crop it tightly.
-
-## What's where
+A static site with no build step, made from the Medium export. It is ready to publish on GitHub Pages.
 
 ```
-index.html          home: intro, case studies, illustration gallery, about
+index.html          home: intro, selected work, about
 work/*.html         one page per case study
-illustrations/      your gallery images (upload here)
-images/             signature.png and any local images
-style.css           colours, fonts and layout
-_config.yml         site settings
-CNAME               the custom domain (sydneyarvanitas.com), don't delete
-localize_images.py  one-time script that copies Medium-hosted images into images/
+style.css           all styling (light + dark mode)
+404.html            not-found page
+localize_images.py  one-time script that copies images off Medium
 ```
 
-## Images still hosted on Medium
+## 1. Copy the images off Medium (do this once)
 
-The case study images load from Medium's servers. Before deleting your Medium posts, run `python3 localize_images.py` in a copy of this repository on your computer, then commit and push. It downloads them into `images/` and updates the pages.
+Right now the pages load their images from Medium's servers. To keep the site working if you ever delete the Medium posts, open a terminal in this folder and run:
 
-## Domain setup (already done)
+```
+python3 localize_images.py
+```
 
-DNS is managed in Cloudflare: four A records on `@` (185.199.108.153, .109, .110, .111) and a CNAME `www` → `sydarv.github.io`, all set to **DNS only** (grey cloud). Proxying them through Cloudflare (orange cloud) stops GitHub's HTTPS certificate from renewing.
+This saves all 33 images into `images/` and updates the pages to use those copies.
+
+## 2. Put it on GitHub
+
+1. Create a new **public** repository on github.com (for example `portfolio`).
+2. Upload the contents of this folder, either by dragging the files into "Add file → Upload files" or by using git:
+   ```
+   git init && git add . && git commit -m "Portfolio"
+   git branch -M main
+   git remote add origin https://github.com/YOUR-USERNAME/portfolio.git
+   git push -u origin main
+   ```
+3. In the repo, open **Settings → Pages**. Under "Build and deployment", choose **Deploy from a branch**, then select `main` and `/ (root)`, and click Save.
+   The site will be live within a minute or two at `https://YOUR-USERNAME.github.io/portfolio/`.
+
+## 3. Connect your domain
+
+1. Still in **Settings → Pages**, type your domain (for example `sydneyarvanitas.com`) under **Custom domain** and save. GitHub will add a `CNAME` file to the repo.
+2. At your domain registrar's DNS settings, add these records:
+
+   | Type  | Name / Host | Value                     |
+   |-------|-------------|---------------------------|
+   | A     | @           | 185.199.108.153           |
+   | A     | @           | 185.199.109.153           |
+   | A     | @           | 185.199.110.153           |
+   | A     | @           | 185.199.111.153           |
+   | CNAME | www         | YOUR-USERNAME.github.io   |
+
+   Delete any existing A records or "parking" records on `@` first.
+3. DNS changes can take a few minutes and occasionally a few hours to spread. Once GitHub shows the domain as verified, tick **Enforce HTTPS**.
+
+Optional but recommended: verify the domain under your GitHub profile's **Settings → Pages**, so nobody else can claim it.
+
+## Editing later
+
+Every page is plain HTML. To change text, edit the file and push again. To add a CV, put `cv.pdf` in this folder and add `<a href="cv.pdf">CV</a>` to the `<nav>` in each page.

@@ -1,5 +1,0 @@
-title: Sydney Arvanitas
-# Files that live in the repository but shouldn't be published
-exclude:
-  - README.md
-  - localize_images.py

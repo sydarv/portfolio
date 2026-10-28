@@ -1,137 +1,99 @@
----
----
 <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sydney Arvanitas | UX designer and illustrator</title>
-<meta name="description" content="Portfolio of Sydney Arvanitas, a UX designer and illustrator in London.">
-<meta property="og:title" content="Sydney Arvanitas | UX designer and illustrator">
-<meta property="og:description" content="Portfolio of Sydney Arvanitas, a UX designer and illustrator in London.">
+<title>Sydney Arvanitas — UX Designer</title>
+<meta name="description" content="Portfolio of Sydney Arvanitas, a UX designer working on research-led product design.">
+<meta property="og:title" content="Sydney Arvanitas — UX Designer">
+<meta property="og:description" content="Portfolio of Sydney Arvanitas, a UX designer working on research-led product design.">
 <meta property="og:image" content="https://cdn-images-1.medium.com/max/1600/1*eCmJn27vPGvVDb3FErv3aA.jpeg">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&family=Caveat+Brush&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..600&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-head">
-  <a class="mark" href="index.html">Sydney</a>
-  <nav aria-label="Main"><a href="index.html#work">Case studies</a><a href="index.html#art">Illustration</a><a href="index.html#about">About</a><a class="pill" href="mailto:sydneyarvanitas@gmail.com">Say hello</a></nav>
+  <a class="mark" href="index.html">Sydney Arvanitas</a>
+  <nav><a href="index.html#work">Work</a><a href="index.html#about">About</a><a href="mailto:sydneyarvanitas@gmail.com">Contact</a></nav>
 </header>
 <main id="main">
 <section class="hero">
-  <svg class="doodle s1" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3c1.5 9 4 13.5 16 17-12 2.6-14.6 7.5-16 17-1.6-9.6-4.4-14.2-16-17C15.8 16.4 18.3 12 20 3z"/></svg><svg class="doodle s2" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3c1.5 9 4 13.5 16 17-12 2.6-14.6 7.5-16 17-1.6-9.6-4.4-14.2-16-17C15.8 16.4 18.3 12 20 3z"/></svg>
-  <p class="hi hand">hi, I'm</p>
-  <h1 class="name">{%- assign sig = false -%}{%- for f in site.static_files -%}{%- if f.path == "/images/signature.png" -%}{%- assign sig = true -%}{%- endif -%}{%- endfor -%}
-{%- if sig -%}<img class="sig-img" src="/images/signature.png" alt="Sydney Arvanitas">{%- else -%}Sydney Arvanitas{%- endif -%}</h1>
-  <svg class="squiggle" viewBox="0 0 320 24" preserveAspectRatio="none" aria-hidden="true"><path d="M4 15c22-10 38-10 52 0s30 9 50-1 36-10 52 1 32 9 50-1 36-9 52 1 30 7 52-3"/></svg>
-  <p class="intro">I'm a UX designer and illustrator in London. I find out where people get stuck, then design the simplest way through.</p>
-  <p class="cta"><a class="btn" href="#work">See case studies</a><a class="btn ghost" href="#art">See illustration</a></p>
+  <p class="eyebrow">UX Designer</p>
+  <h1>I design clear paths through <em>complicated</em> systems.</h1>
+  <p class="intro">From federal hiring portals to credit-union account opening, I use research to find where people get stuck, then design the simplest thing that gets them through.</p>
+  <p class="cta"><a class="btn" href="#work">See the work</a><a class="link" href="mailto:sydneyarvanitas@gmail.com">Get in touch</a></p>
 </section>
-
-<section id="work" class="block">
-  <h2 class="block-title">Case studies</h2>
-  <p class="block-intro">Research-led product design for government, finance and consumer apps.</p>
-  <ul class="case-list">
-<li class="case-row">
-  <a class="snap tape-pink" href="work/deseret-first-credit-union.html" tabindex="-1" aria-hidden="true"><img src="https://cdn-images-1.medium.com/max/1600/1*eCmJn27vPGvVDb3FErv3aA.jpeg" alt="" width="4000" height="2620" loading="eager" decoding="async"></a>
-  <div class="case-text">
-    <h3><a href="work/deseret-first-credit-union.html">Deseret First Credit Union</a></h3>
-    <p>Research into why members abandoned account opening, and a new desktop and mobile flow built to lift completion from 8% toward 30%.</p>
-    <p class="meta">UX designer on a product team, 2025</p>
-    <a class="btn" href="work/deseret-first-credit-union.html">Read the case study</a>
-  </div>
+<section id="work" class="work">
+  <h2 class="section-title">Selected work</h2>
+  <ul class="cards">
+<li class="card">
+  <a href="work/deseret-first-credit-union.html">
+    <div class="thumb"><img src="https://cdn-images-1.medium.com/max/1600/1*eCmJn27vPGvVDb3FErv3aA.jpeg" alt="" loading="eager" decoding="async"></div>
+    <div class="card-text">
+      <p class="eyebrow"><span class="num">01</span>Fintech · Research & product design · 2025</p>
+      <h3>Deseret First Credit Union</h3>
+      <p>Lifting new-account completion from an 8% baseline toward a 30% target.</p>
+    </div>
+  </a>
 </li>
-<li class="case-row">
-  <a class="snap tape-butter" href="work/hr-staffing-portal.html" tabindex="-1" aria-hidden="true"><img src="https://cdn-images-1.medium.com/max/1600/1*aU1h6HM9J244T3KlujVxow.jpeg" alt="" width="1080" height="1080" loading="lazy" decoding="async"></a>
-  <div class="case-text">
-    <h3><a href="work/hr-staffing-portal.html">HR Staffing Portal</a></h3>
-    <p>One portal for a Department of State bureau to request, track and approve new hires instead of chasing emails.</p>
-    <p class="meta">UX designer on a delivery team, 2022</p>
-    <a class="btn" href="work/hr-staffing-portal.html">Read the case study</a>
-  </div>
+<li class="card">
+  <a href="work/patent-public-search.html">
+    <div class="thumb"><img src="https://cdn-images-1.medium.com/max/1600/1*8FKwXU0tYmsH6B3_gNVpYw.png" alt="" loading="eager" decoding="async"></div>
+    <div class="card-text">
+      <p class="eyebrow"><span class="num">02</span>Government · Sole designer · 2022</p>
+      <h3>Patent Public Search</h3>
+      <p>A basic search for a complex public patent database, shipped in six weeks.</p>
+    </div>
+  </a>
 </li>
-<li class="case-row">
-  <a class="snap tape-mint" href="work/zestipy.html" tabindex="-1" aria-hidden="true"><img src="https://cdn-images-1.medium.com/max/1600/1*I8dYP3_Ss-l6A8dcg0-2_Q.jpeg" alt="" width="1080" height="1080" loading="lazy" decoding="async"></a>
-  <div class="case-text">
-    <h3><a href="work/zestipy.html">Zestipy App</a></h3>
-    <p>A home feed, recipe view and ingredients list for a social recipe app pitched as Goodreads for recipes.</p>
-    <p class="meta">Freelance designer, 2022</p>
-    <a class="btn" href="work/zestipy.html">Read the case study</a>
-  </div>
+<li class="card">
+  <a href="work/zestipy.html">
+    <div class="thumb"><img src="https://cdn-images-1.medium.com/max/1600/1*I8dYP3_Ss-l6A8dcg0-2_Q.jpeg" alt="" loading="lazy" decoding="async"></div>
+    <div class="card-text">
+      <p class="eyebrow"><span class="num">03</span>Mobile app · Freelance · 2022</p>
+      <h3>Zestipy App</h3>
+      <p>A home feed and recipe views for a social recipe app.</p>
+    </div>
+  </a>
 </li>
-<li class="case-row">
-  <a class="snap tape-lilac" href="work/patent-public-search.html" tabindex="-1" aria-hidden="true"><img src="https://cdn-images-1.medium.com/max/1600/1*8FKwXU0tYmsH6B3_gNVpYw.png" alt="" width="4000" height="2620" loading="lazy" decoding="async"></a>
-  <div class="case-text">
-    <h3><a href="work/patent-public-search.html">Patent Public Search</a></h3>
-    <p>A basic search for the USPTO&#x27;s patent database, designed and shipped in six weeks for people who found the original too complex.</p>
-    <p class="meta">Sole designer, 2022</p>
-    <a class="btn" href="work/patent-public-search.html">Read the case study</a>
-  </div>
+<li class="card">
+  <a href="work/hr-staffing-portal.html">
+    <div class="thumb"><img src="https://cdn-images-1.medium.com/max/1600/1*aU1h6HM9J244T3KlujVxow.jpeg" alt="" loading="lazy" decoding="async"></div>
+    <div class="card-text">
+      <p class="eyebrow"><span class="num">04</span>Government · Enterprise · 2022</p>
+      <h3>HR Staffing Portal</h3>
+      <p>One portal to request, track and approve federal hires.</p>
+    </div>
+  </a>
+</li>
+<li class="card">
+  <a href="work/previous-design-work.html">
+    <div class="thumb"><img src="https://cdn-images-1.medium.com/max/1600/1*fQB_U7eN62f87cXJ8NGP_A.png" alt="" loading="lazy" decoding="async"></div>
+    <div class="card-text">
+      <p class="eyebrow"><span class="num">05</span>Print & graphic design · 2022</p>
+      <h3>Previous Design Work</h3>
+      <p>Brochures, internal documents and exhibition materials.</p>
+    </div>
+  </a>
 </li>
   </ul>
 </section>
-
-<section id="art" class="block">
-  <h2 class="block-title">Graphic work and illustration</h2>
-  <p class="block-intro">Drawings, print and visual design. Click any piece to see it larger.</p>
-  <ul class="gallery">
-{%- assign exts = ".png,.jpg,.jpeg,.webp,.gif" | split: "," -%}
-{%- assign tapes = "lilac,pink,butter,mint" | split: "," -%}
-{%- assign files = site.static_files | sort: "path" | reverse -%}
-{%- assign n = 0 -%}
-{%- for f in files -%}{%- assign ext = f.extname | downcase -%}
-{%- if f.path contains "/illustrations/" and exts contains ext -%}
-{%- assign t = f.basename | replace: "-", " " | replace: "_", " " -%}
-{%- assign ti = n | modulo: 4 -%}{%- assign tape = tapes[ti] -%}{%- assign n = n | plus: 1 -%}
-<li class="art tape-{{ tape }}"><a href="{{ f.path }}" data-title="{{ t | escape }}"><img src="{{ f.path }}" alt="{{ t | escape }}" loading="lazy" decoding="async"></a><p>{{ t | escape }}</p></li>
-{%- endif -%}{%- endfor -%}
-<li class="art tape-pink"><a href="https://cdn-images-1.medium.com/max/1600/1*fQB_U7eN62f87cXJ8NGP_A.png" data-title="Print design"><img src="https://cdn-images-1.medium.com/max/1600/1*fQB_U7eN62f87cXJ8NGP_A.png" alt="Print design" width="2000" height="1545" loading="lazy" decoding="async"></a><p>Print design</p></li>
-<li class="art tape-butter"><a href="https://cdn-images-1.medium.com/max/1600/1*4xumpe2nNMc3_k36taoC5g.png" data-title="Promotional brochure for Vabin Corporation"><img src="https://cdn-images-1.medium.com/max/1600/1*4xumpe2nNMc3_k36taoC5g.png" alt="Promotional brochure for Vabin Corporation" width="2000" height="1545" loading="lazy" decoding="async"></a><p>Promotional brochure for Vabin Corporation</p></li>
-<li class="art tape-mint"><a href="https://cdn-images-1.medium.com/max/1600/1*N_UiVxqa68VwdS1wr0Pa6w.png" data-title="Internal employee benefits documents for VIRE Consulting"><img src="https://cdn-images-1.medium.com/max/1600/1*N_UiVxqa68VwdS1wr0Pa6w.png" alt="Internal employee benefits documents for VIRE Consulting" width="855" height="769" loading="lazy" decoding="async"></a><p>Internal employee benefits documents for VIRE Consulting</p></li>
-<li class="art tape-lilac"><a href="https://cdn-images-1.medium.com/max/1600/1*9upfVLdJeFTichs59FUXQA.png" data-title="Print design"><img src="https://cdn-images-1.medium.com/max/1600/1*9upfVLdJeFTichs59FUXQA.png" alt="Print design" width="3300" height="2550" loading="lazy" decoding="async"></a><p>Print design</p></li>
-<li class="art tape-pink"><a href="https://cdn-images-1.medium.com/max/1600/1*-EGIbYcdi7Kq5UXvmoYaPQ.png" data-title="Gallery activity for an M.C. Escher exhibition"><img src="https://cdn-images-1.medium.com/max/1600/1*-EGIbYcdi7Kq5UXvmoYaPQ.png" alt="Gallery activity for an M.C. Escher exhibition" width="3300" height="2550" loading="lazy" decoding="async"></a><p>Gallery activity for an M.C. Escher exhibition</p></li>
-  </ul>
-</section>
-
-<section id="about" class="block about">
-  <h2 class="block-title">About</h2>
+<section id="about" class="about">
+  <h2 class="section-title">About</h2>
   <div class="about-body">
-    <p class="about-lead">I'm Sydney. I've designed for government, financial services and consumer apps, and I draw whenever I'm not doing that.</p>
-    <p>Most recently I was the UX designer on a product team at Deseret First Credit Union, before starting a graduate programme at the London School of Economics. My work runs from interviews, surveys and heat mapping through to personas, journey maps and shipped interfaces, often on tight timelines and inside existing design systems.</p>
-    <p>I'm looking for UX and product design roles in London. If you'd like to work together, I'd love to hear from you.</p>
+    <p>I'm Sydney, a UX designer who has worked across government, financial services and consumer apps. Most recently I was the sole UX designer on a product team at Deseret First Credit Union, before starting a graduate programme at the London School of Economics.</p>
+    <p>My work runs from user interviews, surveys and heat mapping through to personas, journey maps and shipped interfaces, often on tight timelines and inside existing design systems.</p>
+    <p>Take a look at my work, and if you're interested, I'd love to chat more.</p>
     <p class="cta"><a class="btn" href="mailto:sydneyarvanitas@gmail.com">Email me</a></p>
   </div>
 </section>
-
-<dialog class="lightbox" aria-label="Artwork">
-  <form method="dialog"><button class="close" aria-label="Close">×</button></form>
-  <img alt="">
-  <p class="lb-title"></p>
-</dialog>
-<script>
-(function () {
-  var dlg = document.querySelector('.lightbox');
-  if (!dlg || !dlg.showModal) return;
-  var img = dlg.querySelector('img'), cap = dlg.querySelector('.lb-title');
-  document.querySelectorAll('.gallery a').forEach(function (a) {
-    a.addEventListener('click', function (e) {
-      e.preventDefault();
-      img.src = a.href; img.alt = a.dataset.title || '';
-      cap.textContent = a.dataset.title || '';
-      dlg.showModal();
-    });
-  });
-  dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
-})();
-</script>
 </main>
 <footer class="site-foot">
-  <p class="foot-sign">Thanks for stopping by!</p>
-  <p class="foot-links"><a href="mailto:sydneyarvanitas@gmail.com">sydneyarvanitas@gmail.com</a></p>
-  <p class="foot-small">© {{ site.time | date: "%Y" }} Sydney Arvanitas</p>
+  <p>© <span id="y">2026</span> Sydney Arvanitas</p>
+  <p><a href="mailto:sydneyarvanitas@gmail.com">sydneyarvanitas@gmail.com</a></p>
 </footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
