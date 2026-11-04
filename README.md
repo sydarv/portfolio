@@ -3,7 +3,7 @@
 A static site with no build step, made from the Medium export. It is ready to publish on GitHub Pages.
 
 ```
-index.html          home: intro, selected work, about
+index.html          home: the corkboard (styled by home.css, images in images/home/)
 work/*.html         one page per case study
 style.css           all styling (light + dark mode)
 404.html            not-found page
