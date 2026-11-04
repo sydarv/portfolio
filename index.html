@@ -3,75 +3,77 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sydney Arvanitas</title>
+<title>Sydney Arvanitas · UX Designer</title>
 <meta name="description" content="Portfolio of Sydney Arvanitas, a UX designer working on research-led product design.">
-<meta property="og:title" content="Sydney Arvanitas">
+<meta property="og:title" content="Sydney Arvanitas · UX Designer">
 <meta property="og:description" content="Portfolio of Sydney Arvanitas, a UX designer working on research-led product design.">
-<meta property="og:image" content="https://cdn-images-1.medium.com/max/1600/1*eCmJn27vPGvVDb3FErv3aA.jpeg">
+<meta property="og:image" content="https://sydneyarvanitas.com/images/home/london-postcard.jpg">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..600&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="images/home/linen.webp">
+<link rel="stylesheet" href="home.css">
 </head>
-<body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="site-head">
-  <a class="mark" href="index.html">Sydney Arvanitas</a>
-  <nav><a href="index.html#work">Work</a><a href="index.html#about">About</a><a href="mailto:sydneyarvanitas@gmail.com">Contact</a></nav>
-</header>
-<main id="main">
-<section class="hero">
-  <h1>I create <em>clear</em> paths through complicated systems.</h1>
-  <p class="intro">Research and design to enhance the performance of digital products</p>
-  <p class="cta"><a class="btn" href="#work">See my work</a><a class="link" href="mailto:sydneyarvanitas@gmail.com">Get in touch</a></p>
-</section>
-<section id="work" class="work">
-  <h2 class="section-title">Selected work</h2>
-  <ul class="cards">
-<li class="card">
-  <a href="work/deseret-first-credit-union.html">
-    <div class="thumb"><img src="https://cdn-images-1.medium.com/max/1600/1*eCmJn27vPGvVDb3FErv3aA.jpeg" alt="" loading="eager" decoding="async"></div>
-    <div class="card-text">
-      <p class="eyebrow"><span class="num">01</span>2024 – 2025</p>
-      <h3>Deseret First Credit Union</h3>
-      <p>Lifting new-account completion from an 8% baseline toward a 30% target.</p>
+<body class="home">
+<a class="skip" href="#work">Skip to work</a>
+<main class="board" id="main">
+  <div class="board__inner">
+    <div class="linen" aria-hidden="true"></div>
+    <img class="frame" src="images/home/wavy-frame.webp" alt="" aria-hidden="true" width="2726" height="2034">
+
+    <figure class="item postcard">
+      <img src="images/home/london-postcard.jpg" alt="Vintage-style postcard of the Houses of Parliament and the Thames, captioned London" width="480" height="364">
+      <img class="pin" style="--px:211;--py:-13" src="images/home/pushpin.png" alt="" width="58" height="70">
+    </figure>
+
+    <div class="item namecard">
+      <h1><img src="images/home/name-card-text.png" alt="Sydney Arvanitas, UX Designer" width="375" height="94"></h1>
+      <img class="pin" style="--px:0;--py:0" src="images/home/pushpin.png" alt="" width="58" height="70">
+      <img class="pin" style="--px:496;--py:0" src="images/home/pushpin.png" alt="" width="58" height="70">
     </div>
-  </a>
-</li>
-<li class="card">
-  <a href="work/patent-public-search.html">
-    <div class="thumb"><img src="https://cdn-images-1.medium.com/max/1600/1*8FKwXU0tYmsH6B3_gNVpYw.png" alt="" loading="eager" decoding="async"></div>
-    <div class="card-text">
-      <p class="eyebrow"><span class="num">02</span>2023</p>
-      <h3>Patent Public Search</h3>
-      <p>A basic search for a public patent database.</p>
-    </div>
-  </a>
-</li>
-<li class="card">
-  <a href="work/hr-staffing-portal.html">
-    <div class="thumb"><img src="https://cdn-images-1.medium.com/max/1600/1*aU1h6HM9J244T3KlujVxow.jpeg" alt="" loading="lazy" decoding="async"></div>
-    <div class="card-text">
-      <p class="eyebrow"><span class="num">03</span>2022</p>
-      <h3>HR Staffing Portal</h3>
-      <p>One portal to request, track and approve federal hires.</p>
-    </div>
-  </a>
-</li>
-  </ul>
-</section>
-<section id="about" class="about">
-  <h2 class="section-title">About</h2>
-  <div class="about-body">
-    <p>I'm Sydney, a UX designer who has worked across government, financial services and consumer apps. Most recently I was the sole UX designer on a product team at Deseret First Credit Union, before starting a graduate programme at the London School of Economics.</p>
-    <p>My work runs from user interviews, surveys and heat mapping through to personas, journey maps and shipped interfaces, often on tight timelines and inside existing design systems.</p>
-    <p>Take a look at my work, and if you're interested, I'd love to chat more.</p>
-    <p class="cta"><a class="btn" href="mailto:sydneyarvanitas@gmail.com">Email me</a></p>
+
+    <section class="item postits" id="work" aria-labelledby="work-title">
+      <h2 id="work-title" class="sr-only">Work</h2>
+      <ul>
+        <li class="postit postit--robin">
+          <img class="postit__logo" src="images/home/merry-robin-logo.png" alt="Merry Robin Publishing" width="141" height="127">
+          <img class="pin" style="--px:74;--py:-21" src="images/home/pushpin.png" alt="" width="58" height="70">
+        </li>
+        <li class="postit postit--dfcu">
+          <a href="work/deseret-first-credit-union.html" aria-label="Deseret First Credit Union case study">
+            <span class="dfcu">
+              <img src="images/home/dfcu-logo.png" alt="" width="119" height="57">
+              <span class="dfcu__name">DESERET FIRST</span>
+              <span class="dfcu__sub">CREDIT UNION</span>
+            </span>
+          </a>
+          <img class="pin" style="--px:70;--py:-21" src="images/home/pushpin.png" alt="" width="58" height="70">
+        </li>
+        <li class="postit postit--uspto">
+          <a href="work/patent-public-search.html" aria-label="USPTO Patent Public Search case study">
+            <img class="postit__logo" src="images/home/uspto-logo.png" alt="" width="119" height="61">
+          </a>
+          <img class="pin" style="--px:74;--py:-21" src="images/home/pushpin.png" alt="" width="58" height="70">
+        </li>
+        <li class="postit postit--robo">
+          <a href="work/hr-staffing-portal.html" aria-label="rOBO HR Staffing Portal case study">
+            <img class="postit__logo" src="images/home/robo-logo.png" alt="" width="73" height="109">
+          </a>
+          <img class="pin" style="--px:74;--py:-29" src="images/home/pushpin.png" alt="" width="58" height="70">
+        </li>
+      </ul>
+    </section>
+
+    <img class="item bow" src="images/home/red-bow.webp" alt="" aria-hidden="true" width="211" height="265">
+
+    <figure class="item photo">
+      <img src="images/home/sydney-photo.jpg" alt="Black and white photo of Sydney smiling" width="240" height="293">
+      <img class="pin" style="--px:95;--py:-34" src="images/home/pushpin.png" alt="" width="58" height="70">
+    </figure>
   </div>
-</section>
 </main>
-<footer class="site-foot">
-  <p>© <span id="y">2026</span> Sydney Arvanitas</p>
+<footer class="home-foot">
   <p><a href="mailto:sydneyarvanitas@gmail.com">sydneyarvanitas@gmail.com</a></p>
+  <p>© <span id="y">2026</span> Sydney Arvanitas</p>
 </footer>
 <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
